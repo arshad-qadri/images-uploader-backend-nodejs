@@ -1,4 +1,4 @@
-const { imageWithId, imageUpload } = require("../controller/imageController");
+const { imageWithId, imageUpload, deleteImage } = require("../controller/imageController");
 const {
   register,
   login,
@@ -12,5 +12,6 @@ router.post("/upload", imageUpload);
 router.post("/register", register);
 router.post("/login", login);
 router.post("/forgot-password", forgotPassword);
+router.post("/delete", deleteImage);
 
 module.exports = router;
