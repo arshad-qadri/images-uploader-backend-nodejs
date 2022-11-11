@@ -53,7 +53,6 @@ exports.login = async (req, res) => {
 exports.forgotPassword = async (req, res) => {
   const { email } = req.body;
   const user = await User.findOne({ email });
-  console.log(user);
   if (user) {
     user.password = req.body.newPassword;
     await user.save();
